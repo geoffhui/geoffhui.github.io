@@ -114,7 +114,7 @@ function dlt() {
         method: 'DELETE'
     })
     .then(res => res.json())
-    .then(data => {
+    .then((data) => {
         let delete_item = document.getElementById('response');
         let input = document.getElementById('input-delete-recipe').value;
         delete_item.innerHTML = input + " has been deleted.";
@@ -162,6 +162,16 @@ function search_fletter() {
     })
     .then((res) => res.json())
     .then((data) => {
+        let fletter_drinks = document.getElementById('response');
+        fletter_drinks.innerHTML = ""
+        fletter_drinks.innerHTML += "["
+        for(let i = 0; i < data.length; i++){
+            fletter_drinks.innerHTML += `{"id":${data[i].id},"name":"${data[i].name}"},"category":"${data[i].category}","instructions":"${data[i].instructions}"`;
+            if (i > data.length - 1) {
+                fletter_drinks.innerHTML += ","
+            }
+        }
+        fletter_drinks.innerHTML += "]"
         console.log(data)
     }).catch(e => console.log(e))
 }
