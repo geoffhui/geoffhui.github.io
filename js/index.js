@@ -116,7 +116,7 @@ function dlt() {
     .then(res => res.json())
     .then((data) => {
         let delete_item = document.getElementById('response');
-        let input = document.getElementById('input-delete-recipe').value.toString();
+        let input = document.getElementById('input-delete-recipe').value;
         delete_item.innerHTML = `${input} has been deleted.`;
     }).catch(e => console.log(e))
 }
@@ -262,3 +262,26 @@ function filter_cocktail() {
 }
 // end filter
 
+function search_random() {
+    let inputSearchId = document.getElementById("input-search-id").value.trim()
+    // location.href=`http://localhost:8080/recipe/search/${inputSearch}`
+    // let url = `http://localhost:8000/recipe/search_id/${inputSearchId}`
+    let url = `https://isa-termproj.herokuapp.com/api/v1/random`
+
+    console.log(url)
+    fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+        let search = document.getElementById('response');
+        search.innerHTML = ""
+        search.innerHTML += "["
+        for(let i = 0; i < data.length; i++){
+            search.innerHTML += `{"id":${data[i].id},"name":"${data[i].name}","category":"${data[i].category}","amount":"${data[i].amount}","ingredient_id":${data[i].ingredient_id},"recipe_id":${data[i].recipe_id},"instructions":"${data[i].instructions}"}`;
+            if (i > data.length - 1) {
+                search.innerHTML += ","
+            }
+        }
+        search.innerHTML += "]"
+        console.log(data)
+    }).catch(e => console.log(e))
+}
