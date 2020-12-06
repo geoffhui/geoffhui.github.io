@@ -116,8 +116,8 @@ function dlt() {
     .then(res => res.json())
     .then((data) => {
         let delete_item = document.getElementById('response');
-        let input = JSON.parse(JSON.stringify(document.getElementById('input-delete-recipe').value.toString()));
-        delete_item.innerHTML = input + " has been deleted.";
+        let input = document.getElementById('input-delete-recipe').value.toString();
+        delete_item.innerHTML = `${input} has been deleted.`;
     }).catch(e => console.log(e))
 }
 
