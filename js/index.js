@@ -169,7 +169,7 @@ function search_fletter() {
 // filters 
 function filter_beer() {
     // let url = `http://localhost:8000/recipe/category/beer`
-    let url = `https://isa-termproj.herokuapp.com/api/v1/beer`
+    let url = `https://isa-termproj.herokuapp.com/api/v1/category/beer`
     console.log(url)
     fetch(url)
     .then(res => res.json())
@@ -190,7 +190,7 @@ function filter_beer() {
 
 function filter_ordinary_drink() {
     // let url = `http://localhost:8000/recipe/category/ordinarydrink`
-    let url = `https://isa-termproj.herokuapp.com/api/v1/ordinarydrink`
+    let url = `https://isa-termproj.herokuapp.com/api/v1/category/ordinarydrink`
     console.log(url)
     fetch(url)
     .then(res => res.json())
@@ -211,7 +211,7 @@ function filter_ordinary_drink() {
 
 function filter_shot() {
     // let url = `http://localhost:8000/recipe/category/shot`
-    let url = `https://isa-termproj.herokuapp.com/api/v1/shot`
+    let url = `https://isa-termproj.herokuapp.com/api/v1/category/shot`
     console.log(url)
     fetch(url)
     .then(res => res.json())
@@ -232,7 +232,7 @@ function filter_shot() {
 
 function filter_cocktail() {
     // let url = `http://localhost:8000/recipe/category/cocktail`
-    let url = `https://isa-termproj.herokuapp.com/api/v1/cocktail`
+    let url = `https://isa-termproj.herokuapp.com/api/v1/category/cocktail`
     console.log(url)
     fetch(url)
     .then(res => res.json())
