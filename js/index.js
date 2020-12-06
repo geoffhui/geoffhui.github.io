@@ -166,7 +166,7 @@ function search_fletter() {
         fletter_drinks.innerHTML = ""
         fletter_drinks.innerHTML += "["
         for(let i = 0; i < data.length; i++){
-            fletter_drinks.innerHTML += `{"id":${data[i].id},"name":"${data[i].name}"},"category":"${data[i].category}","instructions":"${data[i].instructions}"`;
+            fletter_drinks.innerHTML += `{"name":"${data[i].name}"}"`;
             if (i > data.length - 1) {
                 fletter_drinks.innerHTML += ","
             }
