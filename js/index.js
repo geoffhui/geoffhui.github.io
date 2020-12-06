@@ -262,6 +262,29 @@ function filter_cocktail() {
 }
 // end filter
 
+function filter() {
+    // let url = `http://localhost:8000/recipe/category/ordinarydrink`
+    let filterName= document.getElementById("input-filter-name").value.trim()
+    console.log(filterName)
+    let url = `https://isa-termproj.herokuapp.com/api/v1/category/${filterName}`
+    console.log(url)
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        let ordinary = document.getElementById('response');
+        ordinary.innerHTML = ""
+        ordinary.innerHTML += "["
+        for(let i = 0; i < data.length; i++){
+            ordinary.innerHTML += `{"id":${data[i].id},"name":"${data[i].name}"},"category":"${data[i].category}","instructions":"${data[i].instructions}"`;
+            if (i > data.length - 1) {
+                ordinary.innerHTML += ","
+            }
+        }
+        ordinary.innerHTML += "]"
+        console.log(data)
+    }).catch(e => console.log(e))
+}
+
 function search_random() {
     let inputSearchId = document.getElementById("input-search-id").value.trim()
     // location.href=`http://localhost:8080/recipe/search/${inputSearch}`
