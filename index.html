@@ -1,67 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drinks</title>
-    <script src="./js/index.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <div id="response"></div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Portfolio</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <h1 class="text-uppercase text-white font-weight-bold">Geoff Hui</h1>
+                        <hr class="divider my-4" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 font-weight-light mb-5">Software Developer</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">About Me</h2>
+                        <hr class="divider light my-4" />
+                        <p class="text-white-50 mb-4">Hello! I'm Geoff Hui, a recent graduate of the Computer Systems Technology program at British Columbia Institute of Technology. I had the pleasure of taking the Programming Paradigms option, where I had the opportunity to learn about Functional programming as well as Concurrent programming.
+                                                    <br><br> I have always had an interest in solving puzzles. I like to think of coding problems like they are a puzzle waiting to be solved. You find solutions, execute them, and feel a sense of accomplishment when you reach the correct results.
+                                                    <br><br> Here are some of the technologies that I have worked with: <br>
+                        </p>
+                        <div class="row">
+                            <div class="column">
+                                <ul class="text-white-50 mb-4">
+                                    <li>Python</li>
+                                    <li>Java</li>
+                                    <li>Golang</li>
+                                    <li>Android Studio</li>
+                                    <li>OCaml</li>
+                                </ul>
+                            </div>
+                            <div class="column">
+                                <ul class="text-white-50 mb-4">
+                                    <li>HTML, CSS, Javascript</li>
+                                    <li>Elixir</li>
+                                    <li>C</li>
+                                    <li>MySQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- get all drinks -->
-    <input id="btn-drinks" type="submit" value="Get all drinks" onclick="drinks()"><br><br>
+        <!-- Portfolio-->
+        <div id="portfolio">
+            <div class="container-fluid p-0">
+                <div class="row no-gutters">
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="./projects/stomptheworld/main.html">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Stomp The World</div>
+                                <p class="project-category text-white-50">
+                                    Web Based Phone Application<br>
+                                    Technologies: Phaser 3 Framework
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg">
+                            <img class="img-fluid" src="assets/img/portfolio/chatapp.png" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Chatapp</div>
+                                <p class="project-category text-white-50">
+                                    Chatroom Service<br>
+                                    Technologies: HTML, CSS, Javascript, Golang
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg">
+                            <img class="img-fluid" src="assets/img/portfolio/eatsafe1.png" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">EatSafe</div>
+                                <p class="project-category text-white-50">
+                                    Android Application<br>
+                                    Technologies: Java, Android Studio
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="./projects/Zombie Hunter/index.html">
+                            <img class="img-fluid" src="assets/img/portfolio/zombiehunter.jpg" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">Zombie Hunter</div>
+                                <p class="project-category text-white-50">
+                                    Web Application<br>
+                                    Technologies: HTML, CSS, Javascript
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg">
+                            <img class="img-fluid" src="assets/img/portfolio/beavertail.png" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-name">BeaverTail</div>
+                                <p class="project-category text-white-50">
+                                    Web Application for World News<br>
+                                    Technologies: HTML, CSS, Javascript, Node.js
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="" />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-name">Discord Bot</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- search drink by name -->
-    <input id="input-search-name" type="text" placeholder="Name"><br>
-    <input id="btn-submit-name" type="submit" value="Search by name" onclick="search_name()"><br><br>
-
-    <!-- search drink by id -->
-    <input id="input-search-id" type="text" placeholder="Id"><br>
-    <input id="btn-submit-id" type="submit" value="Search by id" onclick="search_id()"><br><br>
-
-    <!-- search drink by first letter -->
-    <input id="input-search-fletter" type="text" placeholder="first letter"><br>
-    <input id="btn-submit-fletter" type="submit" value="Search by first letter" onclick="search_fletter()"><br><br>
-
-    <!-- search drink by random  -->
-    <input id="btn-submit-random" type="submit" value="Search by random" onclick="search_random()"><br><br>
-
-    <!-- add drink -->
-    Add a drink recipe:<br>
-    Name:<br>
-    <input id="input-add-recipe-name" type="text" placeholder=""><br>
-    Category:<br>
-    <input id="input-add-recipe-category" type="text" placeholder="Hint: beer, ordinary drink, cocktail, shot"><br>
-    Instructions:<br>
-    <input id="input-add-recipe-instructions" type="text" placeholder=""><br>
-    Ingredients:<br>
-    <input id="input-add-recipe-ingredients" type="text" placeholder=""><br>
-    Amount of each ingredient:<br>
-    <input id="input-add-recipe-amounts" type="text" placeholder=""><br>
-    <input id="btn-add" type="submit" value="Add" onclick="add()"><br><br>
-
-    <input id="input-delete-recipe" type="text" placeholder="Delete a drink recipe"><br>
-    <input id="btn-delete" type="submit" value="Delete" onclick="dlt()"><br><br>
-    <!-- end -->
-
-    <input id="input-filter-name" type="text" placeholder="Filter by category"><br>
-    <input id="btn-filter" type="submit" value="Filter" onclick="filter()"><br><br>
-
-    Filters:<br>
-    <input id="btn-filter-beer" type="submit" value="beers" onclick="filter_beer()">
-    <input id="btn-filter-ordinary-drink" type="submit" value="ordinary drink" onclick="filter_ordinary_drink()">
-    <input id="btn-filter-shot" type="submit" value="shots" onclick="filter_shot()">
-    <input id="btn-filter-cocktail" type="submit" value="cocktails" onclick="filter_cocktail()"><br><br>
-
-    Change the name of a drink:<br>
-    Old name:
-    <input id="input-old-name" type="text" placeholder="Old name"><br>
-    New name:
-    <input id="input-new-name" type="text" placeholder="New name"><br>
-    <input id="btn-change-name" type="submit" value="Change" onclick="update()">
-
-</body>
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Let's Get In Touch!</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-muted mb-5">Feel free to contact me and I will get back to you as soon as possible!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                        <div>+1 (778) 712-8055</div>
+                    </div>
+                    <div class="col-lg-4 mr-auto text-center">
+                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                        <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                        <a class="d-block" href="mailto:geoffhui5@gmail.com">geoffhui5@gmail.com</a>
+                    </div>
+                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                        <i class="fab fa-linkedin fa-3x mb-3 text-muted"></i>
+                        <a class="d-block" href="https://www.linkedin.com/in/geoff-hui">Geoff Hui</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
